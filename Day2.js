@@ -125,6 +125,8 @@ let number= 10;
 
  //Feature Request:
 
+ 
+
  let  val=100;
  
  let result=val%2===0?'even':'odd';
@@ -134,7 +136,7 @@ let number= 10;
 
  let name=str==="soni"?'my name is soni':"no this not my name";
  console.log(name);
- 
+
 
 
 
