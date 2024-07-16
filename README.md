@@ -73,6 +73,10 @@ We welcome contributions to improve the challenge! If you have suggestions or im
 3. Commit your changes (`git commit -m 'Add new feature'`)
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a pull request
+## Reference
+ 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript
+ 2. https://www.w3schools.com/js
+
 
 ## License
 
