@@ -10,7 +10,7 @@ console.log(`Number from 1 to 5 are:${number}`);
 let name=["soni","kajal","anshu","vishal"];
 console.log(`First element of array name is:${name[0]}`);
 console.log(`Last element of array name is:${name[name.length-1]}`);
-console.log("name in sorted order:"+name.sort());// Noted:sort() method works well for string value npt for number when array element are number then it reqire compare function
+console.log("name in sorted order:"+name.sort());// Noted:sort() method works well for string value not for number when array element are number then it reqire compare function
 console.log("index of element"+name.indexOf("vishal"));
 
 //Activity 2:Array Methods(Basic)
