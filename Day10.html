@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #input{
+        width: 190px;
+        height: 30px;
+        border-radius: 5%;
+        border:2px solid black ;
+      }
+      .btn{
+        width:70px ;
+        height: 25px;
+        background-color: green;
+        border-radius: 5px;
+      }
+      #myImage {
+            width: 200px; /* Adjust as needed */
+            height: auto;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body style="background-color: gray; ">
+    <div class="container">
+        <p class="pra">I am Paragraph tag</p>
+        <input type="text" id="input" placeholder="enter text here">
+        <button class="btn">Click</button>
+    </div>
+    <p>Here is image</p>
+    <img src="image/bird.jpg" alt="image" id="myImage">
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <button type="submit" id="btn2">Submit</button>
+    </form>
+    <label for="mySelect">Choose an option:</label>
+    <select id="mySelect">
+        <option value="" selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <p id="displayText">Selected value: </p>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <div id="parent"></div>
+    <div id="addchild">Add children</div>
+    
+
+    <script src="Day10.js"></script>
+    
+</body>
+</html>
