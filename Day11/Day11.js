@@ -32,7 +32,7 @@ const myPromise2 = new Promise((resolve, reject) => {
     });
 //Chaining Promises
 //task 3:
-/*
+
 const fetchUserData = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -75,7 +75,7 @@ const fetchUserData = () => {
     .catch((error) => {
       console.error(error);
     });
-    */
+    
   
 
 //Activity 3:Using Async/Await
