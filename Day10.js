@@ -20,6 +20,7 @@ image.addEventListener('dblclick',()=>{
     }
 })
 
+
 //Activity 2:Mouse Events
 //task 3:
 let paragraph=document.getElementsByClassName('pra')[0];
