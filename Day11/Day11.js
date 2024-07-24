@@ -32,7 +32,7 @@ const myPromise2 = new Promise((resolve, reject) => {
     });
 //Chaining Promises
 //task 3:
-/*
+
 const fetchUserData = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -75,7 +75,7 @@ const fetchUserData = () => {
     .catch((error) => {
       console.error(error);
     });
-    */
+    
   
 
 //Activity 3:Using Async/Await
@@ -120,7 +120,7 @@ const examplePromise = () => {
   myfun();
   //Activity 4:
   //task 6:
-  const apiKey = 'ad80d84778f0cf5c625cb210b95e4b76'; // Replace with your actual OpenWeatherMap API key
+  const apiKey = 'your api key'; // Replace with your actual OpenWeatherMap API key
   const city = 'Patna'; // City name should be a string
 
    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
