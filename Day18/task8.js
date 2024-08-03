@@ -44,7 +44,6 @@ let arr2=[1,2,3,4,5,6];
 let n2=arr.length;
 let d=2;
 console.log(reverse( arr2,0,d-1));
-
 console.log(reverse(arr2,d,n2-1));
 console.log(`reversed arrays : ${reverse(arr,0,n2-1)}`);
 
