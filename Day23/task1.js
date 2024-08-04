@@ -1,9 +1,6 @@
 //Day 23 :LeetCode Hard
 
 //task 1:  Median of two sorted arrays.
-
-
-
 function median(a, b) {
     // size of two given arrays:
     const n1 = a.length, n2 = b.length;
