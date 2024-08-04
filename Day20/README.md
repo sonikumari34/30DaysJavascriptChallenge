@@ -43,7 +43,6 @@ localStorage:
 =======
  const value = localStorage.getItem('key');
 console.log(value);
->>>>>>> 19a3517635857f8656e1fe8181e2d0de785b0d81
 
 localStorage.removeItem('key');
 localStorage.clear();
