@@ -27,14 +27,11 @@ sessionStorage.setItem('key', 'value');
 2. **Retrieving Data
 localStorage:
 
-
 const value = localStorage.getItem('key');
 console.log(value);
-sessionStorage:
 
 
-const value = sessionStorage.getItem('key');
-console.log(value);
+
 3. **Removing Data
 Remove Specific Item:
 
