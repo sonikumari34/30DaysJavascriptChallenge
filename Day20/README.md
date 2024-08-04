@@ -25,11 +25,11 @@ localStorage.setItem('key', 'value');
  const value = localStorage.getItem('key');
 console.log(value);
 
-### 1. Storing Data
 localStorage.removeItem('key');
 localStorage.clear();
 
 ### `sessionStorage`:
+
 sessionStorage.setItem('key', 'value');
 const value = sessionStorage.getItem('key');
 console.log(value);
