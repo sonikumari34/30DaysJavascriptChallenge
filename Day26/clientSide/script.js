@@ -13,10 +13,18 @@ ws.onopen = () => {
 };
 
 ws.onmessage = (event) => {
-  const { type, message, username } = JSON.parse(event.data);
+  const { type, message, username: senderName } = JSON.parse(event.data);
   if (type === 'message') {
     const li = document.createElement('li');
-    li.textContent = username ? `${username}: ${message}` : message;
+    
+    // Determine message alignment and background color based on the sender
+    if (senderName === username) {
+      li.classList.add('sent');
+    } else {
+      li.classList.add('received');
+    }
+    
+    li.textContent = `${senderName}: ${message}`;
     messageList.appendChild(li);
   }
 };
@@ -41,11 +49,12 @@ const sendMessage = () => {
     const payload = {
       type: 'message',
       message: message,
-      username: username // Replace 'YourUsername' with the actual username if needed
+      username: username
     };
+    
     const li = document.createElement('li');
-    li.textContent = ` ${username}: ${message}`
-    li.textContent = payload.username ? `${payload.username}: ${payload.message}` : payload.message;
+    li.classList.add('sent');
+    li.textContent = `${username}: ${message}`;
     messageList.appendChild(li);
 
     ws.send(JSON.stringify(payload));

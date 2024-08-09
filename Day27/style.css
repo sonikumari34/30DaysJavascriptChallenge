@@ -1,0 +1,206 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navigation bar styles */
+.nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1 {
+    margin: 0;
+}
+
+.addTaskForm {
+    display: flex;
+    align-items: center;
+}
+
+.addTaskForm button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addTaskForm button:hover {
+    background-color: #45a049;
+}
+
+/* Task form styles */
+#task-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 1000;
+}
+
+#task-form.hidden {
+    display: none;
+}
+
+#task-form h1 {
+    margin-bottom: 1em;
+}
+
+#task-form label {
+    display: block;
+    margin-top: 0.5em;
+}
+
+#task-form input, 
+#task-form textarea {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#task-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#task-form button:hover {
+    background-color: #45a049;
+}
+
+/* Task list styles */
+#task-list {
+    padding: 1em;
+}
+
+#task-list h2 {
+    margin-bottom: 1em;
+}
+
+#task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 0.5em 0;
+    padding: 1em;
+    border-radius: 4px;
+    position: relative;
+}
+
+.task-card .complete-button, .task-card .edit-button, .task-card .delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Complete button (checkmark) */
+.complete-button {
+    color: #4CAF50;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+/* Edit button */
+.edit-button {
+    color: #21f34f; /* Green background for edit button */
+    position: absolute;
+    top: 0.5em;
+    right: 3.5em; /* Adjust as needed */
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    color: #1976D2; /* Darker color on hover */
+}
+
+/* Delete button (trash icon) */
+.delete-button {
+    color: #f44336; /* Red background for delete button */
+    position: absolute;
+    top: 0.5em;
+    right: 2em; /* Adjust as needed */
+}
+
+/* Confirm dialog styles */
+#confirm-dialog {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 1000;
+}
+
+#confirm-dialog.hidden {
+    display: none;
+}
+
+#confirm-dialog p {
+    margin-bottom: 1em;
+}
+
+#confirm-dialog button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+#confirm-dialog button:hover {
+    background-color: #45a049;
+}
+
+#confirm-dialog #confirm-no {
+    background-color: #f44336;
+}
+
+#confirm-dialog #confirm-no:hover {
+    background-color: #e53935;
+}
+
+/* Completed Task */
+.task-card.completed {
+    text-decoration: line-through;
+    color: #e22323;
+}

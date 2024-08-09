@@ -103,4 +103,38 @@
     background-color: #21c72c; /* Darker shade for hover */
     transform: scale(1.05); /* Slightly larger on hover */
   }
-  
+
+/* Style for all messages */
+#message {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#message li {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* Style for sent messages */
+.sent {
+  background-color: hsl(49, 75%, 47%);
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Style for received messages */
+.received {
+  background-color: #c51422;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Container for the messages */
+#messageContainer {
+  display: flex;
+  flex-direction: column;
+}
