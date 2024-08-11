@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+   <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">E-Commerce Website</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="shopping">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="quantity">0</span>
+            </div>
+        </div>
+   </header>
+
+
+   <section class="hero">
+    <div class="hero-slider">
+        <div><img src="Images/hero1.jpg" alt="Slide 1"></div>
+        <div><img src="images/hero2.jpg" alt="Slide 2"></div>
+        <div><img src="Images/hero3.jpg" alt="Slide 3"></div>
+    </div>
+    <div class="hero-content">
+        <h1>Welcome to Our E-Commerce Store</h1>
+        <p>Discover the best deals on your favorite products.</p>
+        <a href="#product-grid" class="cta-button">Shop Now</a>
+    </div>
+</section>
+
+
+   <main>
+     <section>
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards will be inserted here by JavaScript -->
+            </div>
+        </div>i
+     </section>
+   </main>
+   
+   <!-- Cart Overlay -->
+   <div id="cart-content" class="cart-overlay" style="display: none;">
+       <div class="cart-content-inner">
+           <h2>Your Cart</h2>
+           <ul id="cart-items"></ul>
+           <p>Total: $<span id="cart-total">0.00</span></p>
+           
+           <button id="checkoutbtn">Checkout</button>
+          
+           <div class="closeShooping">Close</div>
+       </div>
+   </div>
+
+   <div id="cart-summary">
+   <div id="order-details" style="display: none;">
+    <div id="order-content"></div>
+   </div>
+   </div></div>
+   
+   
+   
+
+   <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+   </footer>
+
+   <!-- Slick Slider JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   <script src="script.js"></script>
+
+</body>
+</html>

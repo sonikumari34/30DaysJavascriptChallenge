@@ -1,0 +1,74 @@
+[
+    {   "id": 1,
+        "name": "Do it Today ",
+        "price": 2.99,
+        "description": "Do you often wonder whether you really have it in you to accomplish your goals, to win over obstacles, and to succeed in life? . ",
+        "imageUrl": "images/product1.jpg"
+    },
+    {    "id": 2,
+        "name": "You Can ",
+        "price": 4.99,
+        "description": "Do you often wonder whether you really have it in you to accomplish your goals, to win over obstacles, and to succeed in life? Through the empowering self-help manual you can.",
+        "imageUrl": "images/product2.jpg"
+    },
+    {    "id": 3,
+        "name": "The Power of Your Subconscious Mind  ",
+        "price": 1.99,
+        "description": "This remarkable book by Dr. Joseph Murphy, one of the pioneering voices of affirmative thinking, will unlock for you the truly staggering powers of your subconscious mind.",
+        "imageUrl": "images/product3.jpg"
+    },
+    {    "id": 4,
+        "name": "Atomic Habits",
+        "price": 3.49,
+        "description": "People think that when you want to change your life, you need to think big. But world-renowned habits expert James Clear has discovered another way. ",
+        "imageUrl": "images/product5.jpg"
+    },
+    {   "id": 5,
+        "name": "Digital Watch",
+        "price": 3.99,
+        "description":"A digital watch offers precise timekeeping with an easy-to-read LCD or LED display, eliminating the need for traditional hands and markers.",
+        "imageUrl": "images/product10.jpg"
+    },
+    {    "id": 6,
+        "name": "Laptop",
+        "price": 3.99,
+        "description":"A laptop provides portable computing power with a built-in screen, keyboard, and battery, allowing for versatile use on the go.",
+        "imageUrl": "images/product11.jpg"
+    },
+    {   "id": 7,
+        "name": "Smart Phone",
+        "price": 3.99,
+        "description": "A smartphone combines a mobile phone with advanced computing capabilities, offering internet access, apps, and multimedia features in a compact, portable device.",
+        "imageUrl": "images/product12.jpg"
+    },
+    {   "id": 8,
+        "name": "Head Phone",
+        "price": 3.99,
+        "description": "Headphones provide immersive audio with adjustable comfort and superior sound quality, ideal for an enhanced listening experience.",
+        "imageUrl": "images/product14.jpg"
+    },
+    {   "id": 9,
+        "name": "Stop Negative Thinking ",
+        "price": 3.99,
+        "description": "Stop Negative Thinking: How To Control Your Thoughts, Stop Overthinking, And Transform Your Mental Habits",
+        "imageUrl": "images/product6.jpg"
+    },
+    {   "id": 10,
+        "name": "Apple iPad",
+        "price": 3.99,
+        "description": "An Apple iPad delivers a high-performance tablet experience with a sleek design, advanced display technology, and seamless integration with Apple's ecosystem.",
+        "imageUrl": "images/product7.jpg"
+    },
+    {   "id": 11,
+        "name": "Xiaomi Pad 6",
+        "price": 3.99,
+        "description": "Xiaomi Pad 6| Qualcomm Snapdragon 870| Powered by HyperOS |144Hz Refresh Rate| 8GB, 256GB| ",
+        "imageUrl": "images/product8.jpg"
+    },
+    {   "id": 12,
+        "name": "Ear Buds",
+        "price": 3.99,
+        "description": "OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic, 12.4mm Drivers.",
+        "imageUrl": "images/product9.jpg"
+    }
+]

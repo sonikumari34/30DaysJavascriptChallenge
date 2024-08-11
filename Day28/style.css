@@ -1,0 +1,326 @@
+/* Basic Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header .shopping {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .shopping i {
+    font-size: 1.5em;
+}
+
+header .shopping .quantity {
+    background-color: #f44;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px 0;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for better visual */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    background-color: #444;
+}
+
+/* Product Card Image */
+.product-card img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Limit the maximum height of the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 5px; /* Rounded corners for image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Product Card Title */
+.product-card h3 {
+    font-size: 1.1em; /* Slightly smaller font size for title */
+    margin: 10px 0; /* Margin around the title */
+}
+
+/* Product Card Description */
+.product-card p {
+    font-size: 0.9em; /* Slightly smaller font size for description */
+    color: #555; /* Darker text color for readability */
+    margin-bottom: 10px; /* Space below the description */
+}
+
+/* Product Card Price */
+.product-card .price {
+    font-size: 1em; /* Font size for price */
+    color: #333; /* Darker color for price */
+    margin: 5px 0; /* Margin around the price */
+}
+
+/* Product Card Button */
+.product-card button {
+    background-color: #f44; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 8px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    font-size: 0.9em; /* Slightly smaller font size for the button */
+    transition: opacity 0.5s ease-in-out;
+    
+}
+.product-card{
+    opacity: 1;
+}
+
+.product-card button:hover {
+    background-color: #7b7676;
+}
+/* Cart Overlay Styling */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+.cart-content-inner {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh; /* Limit height of the cart content */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.cart-content-inner h2 {
+    margin-bottom: 10px;
+}
+
+.cart-content-inner ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-content-inner ul li {
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align content in a row */
+}
+
+.cart-content-inner ul li img {
+    width: 50px; /* Thumbnail size */
+    height: auto;
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.cart-content-inner ul li div {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart-content-inner ul li button {
+    background-color: #f44;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.cart-content-inner ul li button:hover {
+    background-color: #c33;
+}
+
+.closeShooping {
+    cursor: pointer;
+    background-color: #f44;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .footer-links ul {
+    list-style: none;
+}
+
+footer .footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+
+#checkoutbtn{
+    background-color: #f44; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 8px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    font-size: 0.9em; /* Slightly smaller font size for the button */
+    
+}

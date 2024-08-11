@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <style>
+ /* Checkout form overlay */
+#checkout-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure it appears above other elements */
+}
+
+.checkout-form-overlay {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added box shadow */
+    max-width: 500px; /* Smaller width */
+    width: 100%;
+    position: relative; /* Position relative for absolute positioning of the close button */
+}
+
+.closeCheckout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    z-index: 1002; /* Ensure it is above other content */
+}
+
+.closeCheckout:hover {
+    background-color: #d32f2f;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    height: 60px; /* Slightly smaller height */
+}
+
+.checkout-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: relative; /* For positioning the close button inside */
+}
+
+.checkout-form button:hover {
+    background-color: #218838;
+}
+
+.checkout-form .close-btn-inside {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form .close-btn-inside:hover {
+    background-color: #d32f2f;
+}
+
+.confirmation-message {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d4edda;
+    color: #155724;
+    margin-top: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+   
+        <div id="checkout-form" style="display: none;">
+            <div class="checkout-form-overlay">
+                <button id="close-checkout-form" class="closeCheckout">&times;</button>
+                <h2>Checkout Form</h2>
+                <form id="checkout-form-body">
+                    <!-- Form fields for user details -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    <label for="payment">Payment Details:</label>
+                    <input type="text" id="payment" name="payment" required>
+    
+                    <!-- Display cart items -->
+                    <div id="cart-summary"></div>
+    
+                    <button type="submit">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    
+    
+    
+</body>
+</html>
