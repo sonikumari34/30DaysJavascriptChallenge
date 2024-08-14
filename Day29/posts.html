@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-left">
+                <div class="logo">Bond Hub</div>
+               
+            </div>
+            <div class="navbar-center">
+                <h2 id="username-display"></h2>
+            </div>
+            <div class="navbar-right">
+                <button class="nav-button" onclick="window.location.href='addpost.html'">Add Post</button>
+                <button class="nav-button" onclick="window.location.href='posts.html'">My Posts</button>
+                <button class="nav-button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <!-- Page-specific content goes here -->
+         <div id="post-feed">
+
+           
+           
+         </div>
+        
+    </div>
+    <script src="script.js"></script>
+
+        
+</body>
+</html>

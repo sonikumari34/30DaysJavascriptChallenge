@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Example</title>
+    <style>
+        /* Basic CSS for the button */
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logout Button -->
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <script>
+        function logout() {
+            // Clear session storage, cookies, or any data that holds the user session
+            
+            
+            localStorage.removeItem('userSession');
+        
+            // Redirect to the home page
+            window.location.href = 'homePage.html';  
+        }
+    
+    </script>
+
+   
+</body>
+
+</html>
+

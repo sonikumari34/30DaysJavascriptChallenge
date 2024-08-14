@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Post Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+        <!-- Login Form -->
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="signup.html">SignUp</a></p>
+            </form>
+        </div>
+
+       
+    
+
+    <script>
+        //const posts = [];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle login form submission
+            document.getElementById('login-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('password', password);
+
+                alert('Logged in successfully!');
+                // Redirect to another page (e.g., a dashboard)
+                window.location.href = 'posts.html';
+            });
+        });
+
+         /*   // Handle post form submission
+            document.getElementById('post-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const postText = document.getElementById('post-text').value;
+                const postImage = document.getElementById('post-image').files[0];
+                let imageUrl = '';
+
+                if (postImage) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        imageUrl = e.target.result;
+                        addPostToFeed(postText, imageUrl);
+                    };
+                    reader.readAsDataURL(postImage);
+                } else {
+                    addPostToFeed(postText, imageUrl);
+                }
+
+                document.getElementById('post-text').value = '';
+                document.getElementById('post-image').value = '';
+            });
+
+            function addPostToFeed(text, imageUrl) {
+                const post = { text, imageUrl };
+                posts.push(post);
+
+                const feed = document.getElementById('feed');
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+                postElement.innerHTML = `
+                    <p>${post.text}</p>
+                    ${post.imageUrl ? `<img src="${post.imageUrl}" alt="Post Image" class="post-image">` : ''}
+                `;
+                feed.appendChild(postElement);
+            }
+        }); */
+    </script>
+</body>
+</html>

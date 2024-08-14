@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+<body>
+
+    <main>
+        <div class="signup-container">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required >
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required >
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" require>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </main>
+    <script>
+
+         document.addEventListener('DOMContentLoaded', function () {
+            // Handle Signup form submission
+            document.getElementById('signup-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const email=document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+                localStorage.setItem('confirmpassword', confirmPassword);
+
+
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('email', email);
+                sessionStorage.setItem('password', password);
+                sessionStorage.setItem('confirmpassword', confirmPassword);
+                
+                
+                
+                
+
+                alert(' SignUp in successfully!');
+                // Redirect to another page (e.g., a dashboard)
+                window.location.href = 'posts.html';
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
