@@ -10,7 +10,7 @@
 
 ### User Authentication
 - **Sign Up and Login**: Secure user registration and authentication using email and password.
-- **Password Recovery**: Option to reset the password if forgotten.
+- 
 - **User Profile Management**: Update profile information, including username, bio, and profile picture.
 
 ### Dashboard
@@ -33,4 +33,4 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/bondhub.git
+ https://github.com/sonikumari34/BondHub
