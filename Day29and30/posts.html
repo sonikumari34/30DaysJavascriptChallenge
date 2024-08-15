@@ -17,13 +17,20 @@
             <div class="navbar-center">
                 <h2 id="username-display"></h2>
             </div>
-            <div class="navbar-right">
-                <button class="nav-button" onclick="window.location.href='addpost.html'">Add Post</button>
-                <button class="nav-button" onclick="window.location.href='posts.html'">My Posts</button>
-                <button class="nav-button" onclick="logout()">Logout</button>
-            </div>
+            
+                <div class="navbar-right">
+                    <button class="nav-button"  id="userSiderbar"  onclick="toggleSidebar()">Toggle Sidebar</button>
+                    <button class="nav-button" onclick="window.location.href='addpost.html'">Add Post</button>
+                    <button class="nav-button" onclick="window.location.href='posts.html'">My Posts</button>
+                  
+
+                    <button class="nav-button" onclick="logout()">Logout</button>
+                </div>
+           
         </div>
     </nav>
+
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
         

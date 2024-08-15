@@ -51,6 +51,7 @@ function displayPosts(loggedInUsername) {
 
         const postTitle = document.createElement('h3');
         postTitle.innerText = post.title;
+        postTitle.className ='post-name';
 
         const postContent = document.createElement('p');
         postContent.innerText = post.content;
@@ -92,7 +93,7 @@ function togglePostLayout(postElement) {
         postElement.classList.remove('default-layout');
         postElement.classList.add('clicked-layout');
     }
-}
+}   
 
 function logout() {
     sessionStorage.clear();
@@ -102,11 +103,22 @@ function logout() {
 }
 
 function handleLike(button) {
+    const postElement = button.closest('.post'); 
     const likeCountSpan = button.querySelector('.like-count');
+   
     let likeCount = parseInt(likeCountSpan.textContent);
     likeCount += 1;
     likeCountSpan.textContent = likeCount;
+    localStorage.setItem('likecount',likeCount);
+
+    const postName = postElement.querySelector('.post-name')?.textContent || 'Unknown Post';
+    //const postName = postElement.querySelector('.post-name').textContent;
+  
+
+
+    addNotification(`Your post "${postName}" received a new like!`);
 }
+
 
 function toggleCommentSection(button) {
     const postElement = button.closest('.post');
@@ -118,11 +130,123 @@ function addComment(button) {
     const postElement = button.closest('.post');
     const commentInput = postElement.querySelector('.comment-input');
     const commentsList = postElement.querySelector('.comments-list');
+    const postName = postElement.querySelector('.post-name').textContent;
+  
 
     if (commentInput.value.trim() !== '') {
         const comment = document.createElement('div');
         comment.textContent = commentInput.value;
         commentsList.appendChild(comment);
+        localStorage.setItem('comment',comment);
         commentInput.value = ''; // Clear the input field
+        addNotification(`New comment on "${postName}": "${comment.textContent}"`);
     }
 }
+
+//const sidebar =  document.getElementById('sidebar-container');
+
+// Function to load the sidebar content from 'userinfo.html'
+function loadSidebar() {
+    fetch('userinfo.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            updateuserInfo();
+
+           // simulateNewNotifications();
+            
+            // Check if profilePicInput exists before attaching the event listener
+            const profilePicInput = document.getElementById('profilePicInput');
+            if (profilePicInput) {
+                profilePicInput.addEventListener('change', handleProfilePicChange);
+            } else {
+                console.warn('Profile picture input element not found.');
+            }
+        })
+        .catch(error => console.log('Error loading the sidebar:', error));
+}
+
+
+function updateuserInfo(){
+    const username = sessionStorage.getItem('username');
+    const email = sessionStorage.getItem('email');
+    const userNameElement = document.querySelector('.user-name');
+    const userEmailElement = document.querySelector('.user-email');
+    const userAvatar = document.getElementById('userAvatar');
+    if (userNameElement) {
+        userNameElement.textContent = username || 'User Name'; 
+    }
+    if (userEmailElement) {
+        userEmailElement.textContent = email || 'user@example.com'; 
+    }
+    if (userAvatar) {
+        const avatarSrc = sessionStorage.getItem('avatarSrc');
+        if (avatarSrc) {
+            userAvatar.src = avatarSrc;
+        }else{
+            console.warn('Avatar source not found in session storage.');
+        }
+    }
+    else {
+        console.warn('User avatar element not found.');
+    }
+}
+   
+
+
+// profile pic are added 
+
+function handleProfilePicChange(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const avatarSrc = e.target.result;
+            sessionStorage.setItem('avatarSrc', avatarSrc);
+            document.getElementById('userAvatar').src = avatarSrc;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+ 
+ function toggleSidebar() {
+    const sidebar = document.getElementById('userSidebar');
+    if (sidebar) { 
+        sidebar.classList.toggle('sidebar-open');
+    } else {
+        console.log('Sidebar not loaded yet.');
+    }  
+}
+
+
+
+function addNotification(message) {
+    const notificationList = document.getElementById('notificationList');
+    const listItem = document.createElement('li');
+    listItem.textContent = message;
+    notificationList.appendChild(listItem);
+}
+
+// Example function to simulate receiving notifications
+ /*function simulateNewNotifications() {
+    addNotification('You received a new like on your post!');
+    addNotification('Someone commented on your post!');
+} */
+
+
+
+function logout() {
+        sessionStorage.clear();
+         localStorage.clear(); 
+        alert('Logged out successfully!');
+        window.location.href = 'index.html';
+}
+
+// Load the sidebar content when the page is fully loaded  
+window.onload = function() {
+    loadSidebar();
+};
+
+
+

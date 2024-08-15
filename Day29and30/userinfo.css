@@ -1,0 +1,174 @@
+/* Sidebar default hidden and styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    background-color: #333;
+    color: white;
+    overflow-x: hidden;
+    transition: left 0.3s ease; 
+    padding-top: 20px;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}  
+
+/* Sidebar open state */
+
+.sidebar-open {
+    left: 0; /* Slide the sidebar into view */
+}
+
+/* User profile section styling */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444; /* Darker border for better contrast */
+    padding-bottom: 20px;
+}
+
+/* User avatar styling  */
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff; 
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); 
+    transition: box-shadow 0.3s ease;
+}  
+    
+
+
+/* Glowing effect on hover for the avatar */
+.user-avatar:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); /* Brighter glow on hover */
+}
+
+/* Button styling in user profile */
+
+.user-profile button {
+    background-color: #142ebd; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); 
+} 
+
+/* Button hover effect */
+.user-profile button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5); /* More pronounced shadow on hover */
+}
+
+/* User name styling */
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glowing text effect */
+}
+
+/* User email styling */
+.user-email {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* User menu styling */
+.user-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* User menu links styling */
+.user-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transition for color changes */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Highlight effect on hover for menu items */
+.user-menu a:hover {
+    background-color: #007bff; /* Highlight color on hover */
+    color: white;
+}
+
+/* Add glowing effect to menu items */
+.user-menu a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.user-menu a:hover::before {
+    opacity: 1; /* Show glowing effect on hover */
+}
+
+
+
+
+.notifications {
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+.notifications h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#notificationList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#notificationList li {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#notificationList li:hover {
+    background-color: #555;
+}

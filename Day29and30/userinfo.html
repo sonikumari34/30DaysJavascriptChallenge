@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Sidebar</title>
+    <link rel="stylesheet" href="userinfo.css">
+</head>
+<body>
+
+    <div class="sidebar" id="userSidebar">
+        <div class="user-profile">
+            <img src=" coder.jpg" alt="User Avatar" class="user-avatar">
+            <input type="file" id="profilePicInput" style="display: none;" accept="image/*">
+        <button onclick="document.getElementById('profilePicInput').click();">Change Profile Picture</button>
+            <h2 class="user-name"></h2>
+            <p class="user-email"></p>
+        </div>
+
+        <div class="notifications" id="notifications">
+            <h3>Notifications</h3>
+            <ul id="notificationList">
+                <!-- Notifications will be dynamically added here -->
+            </ul>
+        </div>
+        <ul class="user-menu">
+            <li><a href="posts.html">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+
+  
+
+   
+</body>
+</html>

@@ -8,23 +8,21 @@ body, h1, p, button {
 /* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    
-    
+    background-color: #f4f4f4; /* Light gray background */
     overflow-x: hidden;
     margin: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    padding: 15px 20px; /* Increased padding for better spacing */
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .navbar-content {
@@ -37,18 +35,16 @@ body {
 }
 
 .navbar-left .logo {
-    font-size: 1.8em;
+    font-size: 2em; /* Increased font size for better visibility */
     font-weight: bold;
-    color: transparent;
-    background: linear-gradient(45deg, #ff0055, #00aaff, #00ff99);
-    background-clip: text;
-    -webkit-background-clip: text;
-    box-shadow: 0 0 15px rgba(255, 0, 150, 0.5);
-    margin: 0;
+    color: #fff; /* White text for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
 }
 
 .navbar-center h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: #fff; /* White text */
+    margin: 0;
 }
 
 .navbar-right {
@@ -57,8 +53,7 @@ body {
 }
 
 .nav-button {
-    background: linear-gradient(45deg, #ff0055, #00aaff, #00ff99);
-    
+    background: linear-gradient(45deg, #434343, #555555, #777777); 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     color: white;
@@ -103,33 +98,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.post {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.post h3 {
-    margin: 0 0 10px 0;
-    color:black
-}
-
-.post p {
-    margin: 0;
-    color: black;
-}
-
-.post img {
-    display: block;
-    margin: 10px 0;
-}
-#username-display{
-    color: #ff0055; 
-}
-
-
-
-/* Container for the post feed */
+/* Post Feed Container */
 #post-feed {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -139,7 +108,7 @@ body {
     margin: 0 auto;
 }
 
-/* Individual post styling */
+/* Individual Post Styling */
 .post {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -148,20 +117,17 @@ body {
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Hover effect for posts */
+/* Hover Effect for Posts */
 .post:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
 
-/* Default post layout (image on top, content below) */
-.post.default-layout {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Default Post Layout (Image on Top, Content Below) */
 .post-img-container {
     width: 100%;
     height: 200px; /* Fixed height for images */
@@ -171,24 +137,22 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;  
+    border-radius: 8px;
 }
 
 .post-details {
     padding: 15px;
+    flex: 1; /* Ensures it grows to fill space */
 }
 
-/* Clicked post layout (image on the left, content on the right) */
+/* Clicked Post Layout (Image on the Left, Content on the Right) */
 .post.clicked-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
 }
 
 .post.clicked-layout .post-img-container {
     flex: 1;
     max-width: 50%;
-    height: auto;
 }
 
 .post.clicked-layout .post-details {
@@ -217,7 +181,7 @@ body {
     margin-top: 5px;
 }
 
-/* Add a horizontal separator between the text and meta information */
+/* Add a Horizontal Separator Between the Text and Meta Information */
 .post-details::after {
     content: '';
     display: block;
@@ -227,7 +191,7 @@ body {
     margin: 15px 0;
 }
 
-/* Responsive styling */
+/* Responsive Styling */
 @media (max-width: 768px) {
     #post-feed {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -240,13 +204,14 @@ body {
     }
 }
 
-
+/* Post Actions */
 .post-actions {
     margin-top: 15px;
     display: flex;
     gap: 10px;
 }
 
+/* Like and Comment Buttons */
 .like-button,
 .comment-toggle {
     background-color: #f0f0f0;
@@ -264,14 +229,18 @@ body {
 
 .comment-section {
     margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
 }
 
+/* Comment Box at Bottom of Post */
 .comment-input {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 10px;
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 .comment-submit {
@@ -294,15 +263,14 @@ body {
     border-top: 1px solid #ddd;
 }
 
-
+/* User Post Styling */
 .user-post {
     background-color: #e3f2fd; /* Light blue background */
     border-left: 5px solid #0c161f; /* Blue border */
 }
 
-/* Style for other users' posts */
+/* Style for Other Users' Posts */
 .other-post {
-    background-color: #272726; /* Light green background */
-    border-left: 5px solid #9a4f26; /* Lime green border */
+    background-color: #272726; /* Dark background for other users */
+    border-left: 5px solid #9a4f26; /* Green border */
 }
-
